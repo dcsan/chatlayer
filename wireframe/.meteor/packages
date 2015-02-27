@@ -33,3 +33,6 @@ dcsan:ionic
 meteoric:ionicons-sass
 meteoric:ionic-sass
 dcsan:layout
+
+
+npm-container
