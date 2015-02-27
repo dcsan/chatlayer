@@ -11,6 +11,7 @@ callback-hook@1.0.2
 check@1.0.4
 coffeescript@1.0.5
 dburles:collection-helpers@1.0.2
+dcsan:dclib@0.0.2
 dcsan:ionic@0.1.17
 dcsan:layout@0.0.1
 ddp@1.0.14

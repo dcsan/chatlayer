@@ -1,0 +1,16 @@
+template(name='roomList')
+
+  +contentFor "headerTitle"
+    h1.title RoomList
+
+
+  +ionView
+    +ionContent
+      +ionList
+
+        each rooms
+
+          +ionItem(href=href iconLeft=true iconRight=true)
+            +ionIcon(icon='university' class='dark')
+            h2 Room: {{name}}
+            +ionIcon(icon="ios-arrow-right")

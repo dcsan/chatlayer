@@ -26,6 +26,8 @@ momentjs:moment
 meteorhacks:npm
 iron:dynamic-template
 
+# dclib
+dcsan:dclib
 
 # design/layout
 natestrauser:font-awesome
@@ -33,6 +35,7 @@ dcsan:ionic
 meteoric:ionicons-sass
 meteoric:ionic-sass
 dcsan:layout
+
 
 
 npm-container

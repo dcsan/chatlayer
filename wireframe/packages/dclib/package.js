@@ -9,8 +9,6 @@ Package.on_use(function(api) {
   api.use([
     'coffeescript', 
     'underscore', 
-    'iron:router',
-    'dcsan:ribot',
   ]);
 
   api.use([
