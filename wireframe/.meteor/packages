@@ -1,0 +1,35 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+
+coffeescript
+stylus
+
+mquandalle:jade
+iron:router
+siyfion:snap
+accounts-base
+accounts-password
+
+# tinytest
+
+# core/utils
+fastclick
+reactive-var
+velocityjs:velocityjs
+dburles:collection-helpers
+momentjs:moment
+meteorhacks:npm
+iron:dynamic-template
+
+
+# design/layout
+natestrauser:font-awesome
+dcsan:ionic
+meteoric:ionicons-sass
+meteoric:ionic-sass
+dcsan:layout

@@ -1,0 +1,67 @@
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #4a87ee !default;
+$positive:                        #2cee43 !default;
+$calm:                            #43cee6 !default;
+$balanced:                        #66cc33 !default;
+$energized:                       #f0b840 !default;
+$assertive:                       #ef4e3a !default;
+$royal:                           #8a6de9 !default;
+$dark:                            #444 !default;
+
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/_ionic';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+
+/*$positive: #dc6825;*/
+
+
+.ionic-body.platform-android {
+  font-family: "Roboto Slab", sans-serif;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Roboto Slab", sans-serif;
+  }
+
+  .tab-item {
+    font-family: "Roboto Slab", sans-serif;
+  }
+}
+
+.popover {
+  height: auto;
+}
+
+.item p {
+  margin-bottom: 0;
+}
+
+.item-button-left, .item-button-right {
+  button {
+    top: 16px;
+  }
+}
+
+.loading-container .loading {
+  font-size: 25px;
+}
+
+.item {
+  background-color: transparent;
+}
+
+/*
+.item .item-content .item-complex {
+  background-color: #dcd193;
+  color: black;
+}
+*/
+.bar.bar-positive .title {
+  color: black;
+}
+
+.bar-positive .button.button-clear {
+  font-family: 'Roboto Slab';
+  font-size: 12rem;
+  color: black;
+}

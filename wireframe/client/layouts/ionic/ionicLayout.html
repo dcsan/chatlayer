@@ -1,0 +1,11 @@
+<template name="ionicLayout">
+  {{#ionBody}}
+
+        {{> ionNavBar class="bar-dark"}}
+
+        {{#ionNavView}}
+          {{> yield}}
+        {{/ionNavView}}
+
+  {{/ionBody}}
+</template>

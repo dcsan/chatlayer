@@ -1,0 +1,71 @@
+/* smartphones */
+
+h1 {
+  font-size: 30rem;
+  font-family: 'Roboto Slab';
+/*  
+  border-bottom: 4px solid black;
+  border-top: 4px solid black;
+*/  
+  font-weight: 700;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+h2 {
+  font-size: 25rem;
+  font-family: 'Roboto Slab';  
+}
+h3 {
+  font-size: 20rem;
+  font-family: 'Roboto Slab';
+}
+
+p {
+  font-size: 12rem
+}
+
+/* debug box */
+#screen-size {
+  position: fixed;
+  top: 0px;
+  left: 120px;
+  font-size: 9px;
+  background-color: #EEE;
+  color: black;
+  z-index: 1200;
+}
+
+/* desktop / very wide screens */
+@media screen and (min-width: 1024px) {
+  html {font-size:1.6px;}
+}
+
+
+/* ipads / phablets */
+@media screen and (max-width: 1024px) {
+  html {font-size:1.5px;}
+}
+
+/*
+  phablets
+  iphone6plus  414px
+*/
+@media screen and (max-width: 415px) {
+  html {font-size:1.05px;}
+}
+
+
+/* 
+    large smartphones
+    note3 360
+    iphone6: 375
+*/
+@media screen and (max-width: 375px) {
+  html {font-size:1px;}
+}
+
+
+/* small smartphones: S2, iphone4 */
+@media screen and (max-width: 320px) {
+  html {font-size:0.8px;}
+}
