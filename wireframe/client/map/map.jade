@@ -13,6 +13,9 @@ template(name='map')
           .tableBox
             each tables
               span.oneTable {{name}}
+              if this.spacer
+                span.spacer
+
               if this.endcap
                 br
             //- each rows

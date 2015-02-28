@@ -15,6 +15,8 @@ addTableData = () ->
       }
       if letter=="P"
         table.endcap = true
+      if idx % 2 == 0
+        table.spacer = true
       Tables.insert(table)
       idx++
 
