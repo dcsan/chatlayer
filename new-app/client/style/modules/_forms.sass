@@ -1,0 +1,117 @@
+/* #Input
+   ================================================== */
+
+
+$placeholder: darken(#ccc, 10%)
+::-webkit-input-placeholder
+  color: $placeholder
+::-moz-placeholder
+  color: $placeholder
+::-ms-input-placeholder
+  color: $placeholder
+input:-moz-placeholder
+  color: $placeholder
+
+input 
+  &[type="text"], &[type="password"], &[type="email"], &[type="number"]
+    @include Helvetica
+    background: #fff
+    -webkit-font-smoothing: antialiased
+    color: $text
+    width: 100%
+    border: 0px
+    background: rgba(0,0,0,0)
+    font-size: 14px
+    margin: 0px
+    padding: 10px 0
+    line-height: 24px
+    height: 24px
+    margin: 0px
+    text-indent: 0px
+    border-radius: 0px
+    background-image: url( data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== )
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    outline: none
+    &:focus
+      outline: none
+      
+
+input 
+  &[type="button"], &[type="submit"], &[type="reset"]
+    @include Helvetica
+    -webkit-font-smoothing: antialiased
+    border: rgba(0,0,0,0)
+    background: #fff
+    background: rgba(0,0,0,0)
+    background-image: url( data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== )
+    font-size: 14px
+    color: $green
+    font-weight: bold
+    padding: 8px 0
+    outline: none
+    &:hover
+      color: lighten($green, 4%)
+      cursor: pointer
+    &:active
+      color: darken($green, 4%)
+    &:focus
+      outline: none
+/* #Textarea
+   ================================================== */
+
+textarea
+  @include Helvetica
+  -webkit-font-smoothing: antialiased
+  background: rgba(0,0,0,0)
+  color: #606060
+  font-size: 16px
+  margin: 0px
+  width: calc(100% - 28px)
+  padding: 12px 14px
+  border: 0px
+
+  outline: none
+  resize: none
+  min-height: 104px
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  background-image: url( data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== )
+  margin: 0px
+  &:focus
+    outline: none
+
+.selectDiv
+  background-image: url(/images/selectBox.png)
+  background-repeat: no-repeat
+  background-position: right
+  
+select
+  height: 42px
+  line-height: 42px
+  background: #fff
+  color: $text
+  text-align: right
+  @include Helvetica
+  -webkit-font-smoothing: antialiased
+  background: transparent
+  padding-right: 14px
+  margin: 0px
+  border: 0px solid transparent
+  outline: none
+  -webkit-appearance: none
+  border-radius: 0
+  font-size: 14px
+  &:hover
+    cursor: pointer
+  &:active
+    outline: none
+
+
+/* #Mozilla fixes
+   ================================================== */
+
+$white: #fff
+$grey: $lineColor
+
+label
+  padding: 10px 0
