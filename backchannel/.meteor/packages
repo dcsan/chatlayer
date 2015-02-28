@@ -8,5 +8,6 @@ meteor-platform
 autopublish
 insecure
 
-coffeescript
 particle4dev:sass
+coffeescript
+mquandalle:jade

@@ -4,14 +4,19 @@ Template.chatInput.events
 
     event.preventDefault()
 
-    console.log("added", text)
-    text = $("#inputField").val()
+    want = $("#want").val()
+    table = $("#table").val()
 
-    Messages.insert({
-      text: text,
+    msg = {
+      want: want
+      table: table
       createdAt: new Date()
-    })
+    }
 
-    $("#inputField").val("")
+    Messages.insert(msg)
+
+    $("#want").val("")
+    $("#table").val("")
+    console.log("added", msg)
 
     return false
