@@ -1,0 +1,5 @@
+Application
+salesbot 
+Key: rsq9yffrcu3knh4wbbdvjte6 
+Secret: SWSz7kzJsnJEUNjpnMNmTqxS 
+Status: waiting
