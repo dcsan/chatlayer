@@ -1,6 +1,11 @@
 @Messages = new Meteor.Collection("Messages")
 
-data = [
-  {t: "hi whats up"}
-  {t: "not much you?"}
-]
+Meteor.startup ->
+  if Meteor.isServer
+    Messages.remove({})
+
+
+# data = [
+#   {t: "hi whats up"}
+#   {t: "not much you?"}
+# ]
