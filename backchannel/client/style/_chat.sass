@@ -1,0 +1,41 @@
+#chatWrap
+	margin: 0 20px
+	background: lighten(#00B4F7, 44%)
+	margin-top: 20px
+	border-radius: 8px
+
+.chatHeader
+	font-size: 20px
+	margin-top: 20px
+	text-align: center
+input
+	&[type="text"], &[type="password"], &[type="email"]
+		background: #fff
+		font-size: inherit
+		font-family: inherit
+		margin: 5px
+		margin-right: 0px
+		border-radius: 5px 0 0 5px
+		line-height: 46px
+		height: 46px
+		border: 0px solid transparent
+		box-shadow: 0px 0px 0px transparent
+		width: calc(100% - 58px)
+		text-indent: 8px
+input
+	&[type="submit"]
+		background: #57C162
+		height: 48px
+		width: 46px
+		color: #fff
+		font-size: 26px
+		@include Monospace
+		line-height: 36px
+		margin: 5px
+		margin-left: 0px
+		border: 0px solid transparent
+		float: right
+		border-radius: 0 5px 5px 0
+.chatMessage
+	padding: 5px 10px
+	border-top: 1px dotted rgba(0,0,0,.1)

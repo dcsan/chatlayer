@@ -1,0 +1,55 @@
+@mixin Helvetica
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+@mixin HelveticaMedium
+	font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif
+	
+@mixin HelveticaBold
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+@mixin Monospace
+	font-family: "Anadale Mono", "Courier", "Lucidatypewriter", Fixed, monospace
+
+@mixin texture
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGElEQVQIHWO8/+jpf34+XgYmEPHx02cGAEQkBtMHsvZTAAAAAElFTkSuQmCC)
+
+@mixin borderRadius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	border-radius: $radius
+
+@mixin borderRadius4($radius1, $radius2, $radius3, $radius4)
+	-webkit-border-radius: $radius1 $radius2 $radius3 $radius4
+	-moz-border-radius: $radius1 $radius2 $radius3 $radius4
+	border-radius: $radius1 $radius2 $radius3 $radius4
+
+
+@mixin gradient($from, $to)
+	background-color: $from
+	background-image: -moz-linear-gradient($from, $to)
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to))
+	background-image: -webkit-linear-gradient($from, $to)
+	background-image: -o-linear-gradient($from, $to)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0)
+
+@mixin boxShadow($one, $two, $three, $color)
+	-webkit-box-shadow: $one $two $three $color
+	-moz-box-shadow: $one $two $three $color
+	box-shadow: $one $two $three $color
+
+@mixin boxShadow4($one, $two, $three, $four, $five, $six: null)
+	-webkit-box-shadow: $one $two $three $four $five $six
+	-moz-box-shadow: $one $two $three $four $five $six
+	box-shadow: $one $two $three $four $five $six
+
+@mixin textShadow($one, $two, $three, $color)
+	-webkit-text-shadow: $one $two $three $color
+	-moz-text-shadow: $one $two $three $color
+	text-shadow: $one $two $three $color
+
+@mixin opacity($value)
+	opacity: $value
+	filter: alpha(opacity= $value * 100 )
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value*100})
+	zoom: 1
