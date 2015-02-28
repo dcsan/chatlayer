@@ -519,14 +519,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "backchat.sublime-project",
-			"settings":
-			{
-				"buffer_size": 111,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -702,15 +694,31 @@
 	"expanded_folders":
 	[
 		"/Users/dc/dev/shumi/chatlayer/wireframe",
-		"/Users/dc/dev/shumi/chatlayer/wireframe/client/top",
-		"/Users/dc/dev/shumi/chatlayer/wireframe/lib"
+		"/Users/dc/dev/shumi/chatlayer/wireframe/client",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/client/index",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/client/rooms",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/lib",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/packages/dclib"
 	],
 	"file_history":
 	[
-		"/Users/dc/dev/shumi/chatlayer/wireframe/lib/Profiles.coffee",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/client/rooms/room.jade",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/client/rooms/room.coffee",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/lib/Rooms.coffee",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/.meteor/local/build/programs/server/app/lib/Rooms.coffee.js",
 		"/Users/dc/dev/shumi/chatlayer/wireframe/client/index/index.jade",
-		"/Users/dc/.zshrc",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/both/appRoutes.coffee",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/client/rooms/roomList.jade",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/client/rooms/rooms.coffee",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/.meteor/local/build/programs/server/packages/accounts-password.js",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/.meteor/release",
 		"/Users/dc/dev/shumi/chatlayer/wireframe/.meteor/packages",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/packages/dclib/package.js",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/client/index/index.coffee",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/packages/meteor-ionic/components/ionNavBar/ionNavBar.html",
+		"/Users/dc/dev/shumi/chatlayer/docs/backchat.sublime-project",
+		"/Users/dc/dev/shumi/chatlayer/wireframe/lib/Profiles.coffee",
+		"/Users/dc/.zshrc",
 		"/Users/dc/dev/shumi/chatU/app/client/widgets/widgets.styl",
 		"/Users/dc/dev/shumi/chatU/app/both/appRoutes.coffee",
 		"/Users/dc/dev/shumi/chatU/app/packages/cards/lib/Cards.coffee",
@@ -821,24 +829,11 @@
 		"/Users/dc/dev/shumi/chatU/app/client/index/index.coffee",
 		"/Users/dc/dev/shumi/chatU/app/packages/meteor-ionic/components/ionItem/ionItem.html",
 		"/Users/dc/dev/shumi/chatU/app/client/widgets/headline.jade",
-		"/Users/dc/dev/shumi/chatU/app/packages/streamer/lib/CStreamer.coffee",
-		"/Users/dc/dev/shumi/chatU/app/packages/ribot/data/lost/could-should.rive",
-		"/Users/dc/dev/shumi/chatU/app/packages/npm-container/.npm/package/node_modules/airtable/node_modules/request/node_modules/form-data/node_modules/combined-stream/lib/combined_stream.js",
-		"/Users/dc/dev/shumi/chatU/app/packages/npm-container/.npm/package/node_modules/google-spreadsheet/node_modules/request/node_modules/form-data/node_modules/combined-stream/lib/combined_stream.js",
-		"/Users/dc/dev/shumi/chatU/app/packages/npm-container/.npm/package/node_modules/google-spreadsheet/node_modules/xml2js/node_modules/sax/test/cdata-end-split.js",
-		"/Users/dc/dev/shumi/chatU/app/packages/ribot/package.js",
-		"/Users/dc/dev/shumi/chatU/app/packages/ribot/lib/Ribots.coffee",
-		"/Users/dc/dev/shumi/chatU/app/packages/ribot/data/styleguide/usecard.rive",
-		"/Users/dc/dev/shumi/chatU/app/packages/ribot/data/styleguide/quiz.rive",
-		"/Users/dc/dev/shumi/chatU/app/client/styleguide/styleguide.jade",
-		"/Users/dc/dev/shumi/chatU/app/client/widgets/quiz.coffee",
-		"/Users/dc/dev/shumi/chatU/app/client/widgets/quiz.jade",
-		"/Users/dc/dev/shumi/chatU/app/client/widgets/quiz.styl",
-		"/Users/dc/dev/shumi/chatU/app/packages/ribot/tests/ribot.coffee"
+		"/Users/dc/dev/shumi/chatU/app/packages/streamer/lib/CStreamer.coffee"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -1253,96 +1248,13 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "backchat.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 111,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
@@ -1363,11 +1275,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -1396,6 +1315,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"rooms",
+				"lib/Rooms.coffee"
+			],
+			[
+				"inde",
+				"client/index/index.jade"
+			],
+			[
+				"appr",
+				"both/appRoutes.coffee"
+			],
 			[
 				"widg",
 				"app/client/widgets/widgets.styl"
@@ -1427,10 +1358,6 @@
 			[
 				"about",
 				"app/client/about/about.jade"
-			],
-			[
-				"inde",
-				"app/client/index/index.jade"
 			],
 			[
 				"magn",
@@ -1487,10 +1414,6 @@
 			[
 				"startup",
 				"app/packages/trix/both/startup.coffee"
-			],
-			[
-				"appr",
-				"app/both/appRoutes.coffee"
 			],
 			[
 				"dclib",
@@ -1903,10 +1826,6 @@
 			[
 				"ioni",
 				"app/packages/meteor-ionic/components/ionItem/ionItem.html"
-			],
-			[
-				"sa",
-				"app/client/widgets/says.jade"
 			]
 		],
 		"width": 0.0
