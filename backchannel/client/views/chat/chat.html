@@ -1,0 +1,9 @@
+<template name="chat">
+	<div class="chatHeader">Join the Discussion</div>
+	<div id="chatWrap">
+		{{> chatInput}}
+    {{#each messages}}
+		  {{> chatMessage this}}
+    {{/each}}
+	</div>
+</template>

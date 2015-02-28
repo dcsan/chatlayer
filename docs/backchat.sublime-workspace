@@ -697,8 +697,7 @@
 		"/Users/dc/dev/shumi/chatlayer/wireframe/client",
 		"/Users/dc/dev/shumi/chatlayer/wireframe/client/index",
 		"/Users/dc/dev/shumi/chatlayer/wireframe/client/rooms",
-		"/Users/dc/dev/shumi/chatlayer/wireframe/lib",
-		"/Users/dc/dev/shumi/chatlayer/wireframe/packages/dclib"
+		"/Users/dc/dev/shumi/chatlayer/wireframe/lib"
 	],
 	"file_history":
 	[
@@ -1837,7 +1836,7 @@
 		[
 			[
 				"",
-				"~/dev/shumi/redes/docs/redes.sublime-project"
+				"~/dev/shumi/chatlayer/docs/backchat.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -1854,7 +1853,7 @@
 		],
 		"width": 668.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

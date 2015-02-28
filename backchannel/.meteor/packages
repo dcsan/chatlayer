@@ -7,4 +7,6 @@
 meteor-platform
 autopublish
 insecure
+
+coffeescript
 particle4dev:sass
