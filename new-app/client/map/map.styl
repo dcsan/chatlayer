@@ -1,19 +1,22 @@
-cellHeight = 28px
+cellHeight = 29.75px
 
 .floorplan
   width 100%
-  background-color #f7f7f7
+  background-color #d7d7d7
   
   .bub
     position absolute
-    top -30px
-    padding 5px
-    background-color white
-    border-radius 4px
-    border 1px solid black
-    font-size 20px
+    top 0px
+    left -50%
+    padding 5%
+    background-color #f7f7f7
+    border-radius 2px
+    border 3px solid black
+    font-size 16px
+    width 200%
     color black
     z-index 200
+    height 100%
 
   .stage
     height cellHeight
@@ -26,15 +29,18 @@ cellHeight = 28px
       position relative
       display inline-block
       // border 1px solid #444
-      background-color #333
-      font-size 16px
+      background-color #444
+      font-size 24px
+      -webkit-box-shadow inset 1px 1px 1px 2px rgba(255,255,255,1)
+      -moz-box-shadow inset 1px 1px 1px 2px rgba(255,255,255,1)
+      box-shadow inset 1px 1px 1px 2px rgba(255,255,255,.3)
       color white
       padding-top 8px
-      margin 1px
       width 11%
       height cellHeight
       text-align center
       cursor pointer
+      border-radius: 2px
 
     .spacer
       display inline-block
