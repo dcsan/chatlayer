@@ -3,14 +3,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-
 <body>
 	{{> chatroom}}
 	<div class="wrapper">
     {{> content}}
 	</div>
 </body>
-
 
 <template name="appHeader">
 	<div id="header">
@@ -20,32 +18,5 @@
 
 <template name="add">
 	<div class='add'>
-
-	</div>
-</template>
-
-<template name="content">
-	<div class="content">
-    {{> map}}
-	</div>
-</template>
-
-<template name="chatroom">
-	<div class="chatroom">
-
-		<div class="chatroomHeader">
-			BackChannel Chat
-		</div>
-
-    {{> loginBox}}
-
-    <form>
-      <textarea id="textarea" placeholder="What would you like to request?"></textarea><br>
-      <input type="text" maxlength="3" placeholder="Table" id="table" style="text-tranform: uppercase">
-      <input type="submit">
-    </form>
-
-    {{> cards}}
-
 	</div>
 </template>

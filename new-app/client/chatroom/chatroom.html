@@ -1,0 +1,20 @@
+
+<template name="chatroom">
+  <div class="chatroom">
+
+    <div class="chatroomHeader">
+      BackChannel Chat
+    </div>
+
+    {{> loginBox}}
+
+    <form>
+      <textarea id="textarea" placeholder="What would you like to request?"></textarea><br>
+      <input type="text" maxlength="3" placeholder="Table" id="table" style="text-tranform: uppercase">
+      <input type="submit">
+    </form>
+
+    {{> cards}}
+
+  </div>
+</template>
