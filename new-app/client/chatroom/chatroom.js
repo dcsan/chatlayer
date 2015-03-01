@@ -32,6 +32,10 @@ Template.chatroom.events({
     Map.addBubble(data);
     Tables.addUser(data)
     console.log("added", data)
+  },
+  'click .submit': function(){
+        $('#textarea').val('');
+
   }
 
 
