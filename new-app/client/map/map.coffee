@@ -1,3 +1,5 @@
+@Map = {}
+
 # Router.map ->
 #   @route 'map',
 #     path: "/map"
@@ -43,9 +45,15 @@ Template.map.helpers
   # tableName: (row, col) ->
   #   "T #{row} #{col}"
 
+Map.addBubble = (card) ->
+  txt = card.request
+  table = card.table
+  bub = "<div id='bub' class='animated bounceIn bub'>#{txt}</div>"
+  $("#" + table).append(bub)
+
 
 Template.map.events
   'click .oneTable': (evt) ->
     txt = _.shuffle(quotes)[0]
-    bub = "<div id='bub' class='animated bounceIn bub'>#{txt}</div>"
-    $(evt.target).append(bub)
+  'click .bub': (evt) ->
+    $(evt.target).remove();
