@@ -54,6 +54,7 @@ Map.addBubble = (card) ->
 
 Template.map.events
   'click .oneTable': (evt) ->
-    txt = _.shuffle(quotes)[0]
+    # TODO - enter your tables project
+
   'click .bub': (evt) ->
-    $(evt.target).remove();
+    $(evt.target).remove()

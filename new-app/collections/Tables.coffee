@@ -30,10 +30,25 @@ Meteor.startup ->
 
   if Meteor.isServer
     addTableData()
-    
 
     Meteor.publish 'Tables', (query) ->
       query ?= {}
       res = Tables.find(query)
       console.log("Tables", res.count() )
       res
+
+
+Tables.addUser = (card) ->
+  debugger
+  avatarImg = "https://avatars0.githubusercontent.com/u/#{card.user}"
+  table = Tables.findOne({
+    name: card.table
+  })
+  avatars = table.avatars or []
+  avatars.push(avatarImg)
+  update = {$set: {avatars: avatars}}
+  Tables.update(
+    {_id: table._id},
+    update
+  )
+  console.log("updated table", table, "to", update)
