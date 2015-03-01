@@ -8,7 +8,6 @@
 	{{> chatroom}}
 	<div class="wrapper">
 		{{> appHeader}}
-		{{> add}}
 		{{> content}}
 		
 	</div>
@@ -23,51 +22,13 @@
 
 <template name="add">
 	<div class='add'>
-		<div class="right">
-			{{#if currentUser}}
-				<strong>Make a Request!</strong><br>
-				We'll post your request below<br> for everyone to see.<br>
 
-				<form>
-					<textarea id="textarea" placeholder="What would you like to request?"></textarea><br>
-					<input type="text" maxlength="3" placeholder="Table" id="table" style="text-tranform: uppercase">
-					<input type="submit">
-				</form>
-			{{else}}
-				<strong>Hello friend!</strong><br>
-				Please connect to make a post:<br>
-				{{> loginButtons}}
-			{{/if}}
-		</div>
-
-		<div class="section">
-			<strong>Make Friends at Launch Hackathon!</strong><br>
-			Whether you need feedback/help with your project, work with another team, troll the Twitter staff with someone, or just want to grab a beer, simply type in your table number and make a request :)<br><br>
-
-			Have an suggestion? Just request <a href="http://github.com/msavin">msavin</a>, <a href="http://github.com/grp06">grp06</a> or <a href="http://github.com/dcsan">dcsan</a> <br>and we'll be right there.
-		</div>
 	</div>
 </template>
 
 <template name="content">
 	<div class="content">
-		{{#each cards}}
-			<div class="card">
-				<a href="http://github.com/{{username}}">
-					<div class="avatar"
-				style="background-image: url('https://avatars0.githubusercontent.com/u/{{user}}')"
-				></div>
-				</a>
-				<div class="content">
-					<div class="name">
-					{{name}}
-						<div class="right">Table <span>{{table}}</span></div>
-					</div>
-					<div class="request">{{request}}</div>
-					<em>Posted {{time}}</em>
-				</div>
-			</div>
-		{{/each}}
+
 	</div>
 </template>
 
