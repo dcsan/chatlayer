@@ -3,7 +3,7 @@
 tableNames = []
 addTableData = () ->
   Tables.remove({})
-  az = "ABCDEFGHIJKLMNOP".split("")
+  az = "ABCDEFGH".split("")
   idx = 1  # index from 1
   for row in [1..18]
     for letter in az
@@ -13,7 +13,7 @@ addTableData = () ->
         letter: letter
         idx: idx
       }
-      if letter=="P"
+      if letter=="H"
         table.endcap = true
       if idx % 2 == 0
         table.spacer = true
