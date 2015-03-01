@@ -6,10 +6,9 @@ Template.content.rendered = function () {
   }
 };
 
-Template.content.helpers({
+Template.cards.helpers({
   cards: function () {
     return Requests.find({}, {sort: { time: -1}});
-
   },
   time: function () {
        var timex = moment(this.time).startOf('hour').fromNow(); 
@@ -17,7 +16,7 @@ Template.content.helpers({
   }
 });
 
-Template.add.events({
+Template.chatroom.events({
   'submit': function (e, t) {
     e.preventDefault();
 
@@ -28,12 +27,12 @@ Template.add.events({
     var user = Meteor.user().services.github.username;
 
     if (text === "") {
-      alert("Please enter your request.")
+      alert("Please enter your request")
       return
     }
 
     if (table === "") {
-      alert("Please enter your request.")
+      alert("Please enter your table")
       return
     }
 
@@ -47,6 +46,7 @@ Template.add.events({
     }
 
     Requests.insert(data);
+    console.log("added", data)
   }
 });
 Template.chatroom.helpers({

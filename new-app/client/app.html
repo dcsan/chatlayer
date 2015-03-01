@@ -8,7 +8,6 @@
 	{{> chatroom}}
 	<div class="wrapper">
     {{> content}}
-
 	</div>
 </body>
 
@@ -40,17 +39,13 @@
 
     {{> loginBox}}
 
-		<form>
-			<input type="text" placeholder="Your Message" id="message" style="margin-left: 14px; width: 100%">
-		</form>
+    <form>
+      <textarea id="textarea" placeholder="What would you like to request?"></textarea><br>
+      <input type="text" maxlength="3" placeholder="Table" id="table" style="text-tranform: uppercase">
+      <input type="submit">
+    </form>
 
-		{{#each msg}}
-			<div class="message">
-					<div class="avatar"
-				style="background-image: url('https://avatars0.githubusercontent.com/u/{{user}}'); height: 44px; width: 44px; float: left; background-size: cover; margin-right: 9px;"
-				></div>
-				<a href="http://github.com/{{username}}">{{name}}</a><br> {{message}}
-			</div>
-		{{/each}}
+    {{> cards}}
+
 	</div>
 </template>
