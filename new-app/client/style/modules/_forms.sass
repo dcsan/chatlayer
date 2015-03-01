@@ -2,22 +2,13 @@
    ================================================== */
 
 
-$placeholder: darken(#ccc, 10%)
-::-webkit-input-placeholder
-  color: $placeholder
-::-moz-placeholder
-  color: $placeholder
-::-ms-input-placeholder
-  color: $placeholder
-input:-moz-placeholder
-  color: $placeholder
+
 
 input 
   &[type="text"], &[type="password"], &[type="email"], &[type="number"]
     @include Helvetica
     background: #fff
     -webkit-font-smoothing: antialiased
-    color: $text
     width: 100%
     border: 0px
     background: rgba(0,0,0,0)
@@ -38,21 +29,16 @@ input
 input 
   &[type="button"], &[type="submit"], &[type="reset"]
     @include Helvetica
-    -webkit-font-smoothing: antialiased
-    border: rgba(0,0,0,0)
-    background: #fff
-    background: rgba(0,0,0,0)
-    background-image: url( data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== )
     font-size: 14px
-    color: $green
+
     font-weight: bold
     padding: 8px 0
     outline: none
     &:hover
-      color: lighten($green, 4%)
+
       cursor: pointer
     &:active
-      color: darken($green, 4%)
+
     &:focus
       outline: none
 /* #Textarea
@@ -88,7 +74,7 @@ select
   height: 42px
   line-height: 42px
   background: #fff
-  color: $text
+  color: green
   text-align: right
   @include Helvetica
   -webkit-font-smoothing: antialiased
@@ -104,13 +90,3 @@ select
     cursor: pointer
   &:active
     outline: none
-
-
-/* #Mozilla fixes
-   ================================================== */
-
-$white: #fff
-$grey: $lineColor
-
-label
-  padding: 10px 0

@@ -1,2 +1,25 @@
 @import "resets"
 @import "mixins"
+
+// It wasn't importing the forms file 
+
+select
+  height: 42px
+  line-height: 42px
+  background: #fff
+  color: black
+  text-align: right
+  @include Helvetica
+  -webkit-font-smoothing: antialiased
+  background: transparent
+  padding-right: 14px
+  margin: 0px
+  border: 0px solid transparent
+  outline: none
+  -webkit-appearance: none
+  border-radius: 0
+  font-size: 14px
+  &:hover
+    cursor: pointer
+  &:active
+    outline: none
