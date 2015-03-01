@@ -36,5 +36,6 @@ Template.map.helpers
 
 Template.map.events
   'click .oneTable': (evt) ->
-    bub = "<div id='bub' class='bub'>Hi!</div>"
+    txt = _.shuffle(quotes)[0]
+    bub = "<div id='bub' class='animated bounceIn bub'>#{txt}</div>"
     $(evt.target).append(bub)
