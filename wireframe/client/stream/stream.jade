@@ -1,0 +1,13 @@
+template(name='stream')
+
+  +contentFor "headerTitle"
+    h1.title LiveStream
+
+  +contentFor "headerButtonLeft"
+    +ionNavBackButton(text='list')
+
+  +ionView
+    +ionContent
+      +ionList
+        +ionItem
+          h1 Streaming now!

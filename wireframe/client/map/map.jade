@@ -1,0 +1,28 @@
+template(name='map')
+
+  +contentFor "headerTitle"
+    h1.title LiveStream
+
+  +contentFor "headerButtonLeft"
+    +ionNavBackButton(text='list')
+
+  +ionView
+    +ionContent
+      +ionList
+        +ionItem
+
+          .floorplan
+            .stage stage
+
+            .tableBox
+              each tables
+                span.oneTable(id=name) {{name}}
+                if this.spacer
+                  span.spacer
+
+                if this.endcap
+                  br
+              //- each rows
+              //-   each cols
+              //-     span.oneTable {{tableName this ..this}}
+              //-   br

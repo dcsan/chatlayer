@@ -14,7 +14,7 @@ Meteor.startup ->
         action: ->
           room = Rooms.findOne({})
           blob = JSON.stringify(room)
-          @response.writeHead(200, {'Content-Type': 'application/json'});
+          @response.writeHead(200, {'Content-Type': 'application/json'})
           console.log("rooms.api", blob)
           this.response.end(blob)
 
@@ -29,4 +29,4 @@ Meteor.startup ->
     Router.map ->
       @route 'about'
       @route 'profiles'
-      @route 'livestream'
+      @route 'stream'
