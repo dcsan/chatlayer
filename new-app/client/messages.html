@@ -1,0 +1,10 @@
+<template name="messages">
+  {{#each msg}}
+    <div class="message">
+        <div class="avatar"
+      style="background-image: url('https://avatars0.githubusercontent.com/u/{{user}}'); height: 44px; width: 44px; float: left; background-size: cover; margin-right: 9px;"
+      ></div>
+      <a href="http://github.com/{{username}}">{{name}}</a><br> {{message}}
+    </div>
+  {{/each}}
+</template>

@@ -1,0 +1,48 @@
+<template name="cards">
+
+    {{#each cards}}
+      <div class="card">
+        <a href="http://github.com/{{username}}">
+        <img class="avatar"
+          src="https://avatars0.githubusercontent.com/u/{{user}}"
+        />
+        </a>
+        <div class="content">
+          <div class="name">
+          {{name}}
+            <div class="right">Table <span>{{table}}</span></div>
+          </div>
+          <div class="request">{{request}}</div>
+          <em>Posted {{time}}</em>
+        </div>
+      </div>
+    {{/each}}
+
+</template>
+
+
+<template name="cardMessage">
+  {{#each cards}}
+
+    <div class="message">
+      <div class="avatar"
+      style="background-image: url('https://avatars0.githubusercontent.com/u/{{user}}'); height: 44px; width: 44px; float: left; background-size: cover; margin-right: 9px;"
+      >
+      </div>
+      <a href="http://github.com/{{username}}">{{name}}</a><br> {{message}}
+    </div>
+
+  {{/each}}
+</template>
+
+<template name="chatInput">
+  <form>
+    <input type="text" placeholder="Your Message" id="message" style="margin-left: 14px; width: 100%">
+  </form>
+</template>
+
+<template name="junk">
+    <div class="avatar"
+      style="background-image: url('https://avatars0.githubusercontent.com/u/{{user}}')"
+    ></div>
+</template>
