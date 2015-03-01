@@ -3,7 +3,14 @@ cellHeight = 26.5px
 .floorplan
   width 100%
   background-color #d7d7d7
-  
+
+  .stage
+    height cellHeight
+    text-align center
+    border 1px solid #ccc
+    width 100%
+    background-color #c5daeb
+
   .bub
     position absolute
     bottom cellHeight
@@ -18,33 +25,22 @@ cellHeight = 26.5px
     z-index 200
     box-shadow 1px 1px 5px 2px rgba(0,0,0,.4)
 
-    
-
-  .stage
-    height cellHeight
-    text-align center
-
   .tableBox
     width 100%
 
     .oneTable
-      //border 1px solid blue
+      border 1px solid #ccc
       position relative
       display inline-block
       background-color #f7f7f7
-      font-size 24px
-      -webkit-box-shadow inset 1px 1px 1px 2px rgba(255,255,255,1)
-      -moz-box-shadow inset 1px 1px 1px 2px rgba(255,255,255,1)
-      box-shadow inset 1px 1px 1px 2px rgba(0,0,0,.2)
-      color #444
-      padding-top 8px
       width 11%
       height cellHeight
+      // -webkit-box-shadow inset 1px 1px 1px 2px rgba(255,255,255,1)
+      // -moz-box-shadow inset 1px 1px 1px 2px rgba(255,255,255,1)
+      // box-shadow inset 1px 1px 1px 2px rgba(0,0,0,.2)
       text-align center
       cursor pointer
-      border-radius: 2px
-      
-      
+      border-radius 2px
 
       .avatar
         position absolute
@@ -57,14 +53,17 @@ cellHeight = 26.5px
           transform scale(1.1)
           // border 2px solid white
 
-      
       .tableName
+        // border 1px solid red
         position absolute
-        left 10px
+        left 0px
         bottom 0px
-        font-size 16px
-        font-family "Impact"
         z-index 150
+        color #444
+        font-size 12px
+        font-family "HelveticaNeue-Light"
+        text-align center
+        width 100%
 
     .spacer
       display inline-block

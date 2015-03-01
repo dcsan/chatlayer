@@ -59,13 +59,14 @@ Template.map.helpers
   # tableName: (row, col) ->
   #   "T #{row} #{col}"
 
-Map.addBubble = (card) ->
-  txt = card.request
+Map.addBubble = (inputData) ->
+  txt = inputData.request
   # TODO - bump avatar
   return unless txt
-  table = card.table
+  tableName = inputData.table.toUpperCase()
   bub = "<div id='bub' class='animated bounceIn bub'>#{txt}</div>"
-  $("#" + table).append(bub)
+  $("#" + tableName).append(bub)
+  console.log("tableName", tableName, txt)
 
 
 Template.map.events
