@@ -9,7 +9,6 @@ Package.on_use(function(api) {
   api.use([
     'coffeescript', 
     'underscore', 
-    'iron:router',
   ]);
 
   api.use([

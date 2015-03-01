@@ -6,6 +6,8 @@ X capitals on input
 
 X remove text on input
 
+bug on NO table
+
 dont show empty text
 
 click user > show github profile?
@@ -31,3 +33,4 @@ quick poll?
 
 signout
 
+enable outside the hacakathon

@@ -31,12 +31,10 @@ Template.chatroom.events({
     Requests.insert(data);
     Map.addBubble(data);
     Tables.addUser(data)
+    $('#textarea').val('');
     console.log("added", data)
   },
-  'click .submit': function(){
-        $('#textarea').val('');
 
-  }
 
 
 });

@@ -5,23 +5,27 @@
       BackChannel Chat
     </div>
 
-    {{> loginBox}}
     {{#if currentUser}}
 
-    <form>
-      <textarea id="textarea" placeholder="What would you like to request?"></textarea><br>
-      <input type="text" maxlength="3" placeholder="Table" id="table" style="text-tranform: uppercase">
-      <select>
-        <option selected="Choose an Emoji">Choose an Emoji</option>
-        <option value="volvo">{{#emojione}}:beers:{{/emojione}}</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
+      <form>
+        <textarea id="textarea" placeholder="What would you like to request?"></textarea><br>
+        <input type="text" maxlength="3" placeholder="Table" id="table" style="text-tranform: uppercase">
+        <select>
+          <option selected="Choose an Emoji">Choose an Emoji</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
 
-      <input class="submit" type="submit">
-    </form>
-{{/if}}
+        <input class="submit" type="submit">
+      </form>
+
+    {{else}}
+        <strong>Hello Hacker!</strong><br>
+        Please connect to make a post:<br>
+        {{> loginButtons}}
+        <h2> login!</h2>
+    {{/if}}
 
     {{> cards}}
 
