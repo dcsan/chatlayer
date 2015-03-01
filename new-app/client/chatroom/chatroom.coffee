@@ -24,7 +24,7 @@ Template.chatroom.events 'submit': (e, t) ->
     'username': user
     'time': new Date
   Requests.insert data
-  Map.addBubble data
+  Map.redraw()
   Tables.addUser data
   $('#textarea').val ''
   console.log 'added', data

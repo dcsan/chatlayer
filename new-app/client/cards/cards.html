@@ -1,19 +1,28 @@
 <template name="cards">
   {{#each cards}}
-    <div class="card">
 
-      <a href="http://github.com/{{username}}" class="left">
-         <img class="avatar left" src="https://avatars0.githubusercontent.com/u/{{user}}"/>
-      </a>
+    {{#if hastext this}}
 
-      <div class="name">
-        {{name}} from {{table}}<div class="right">Posted {{time}}</div>
+      <div class="card">
+
+        <a href="http://github.com/{{username}}" class="left">
+           <img class="avatar left" src="https://avatars0.githubusercontent.com/u/{{user}}"/>
+        </a>
+
+        <div class="name">
+          {{name}} from {{table}}
+        </div>
+
+        {{#if request}}
+          <div class="request">{{request}}</div> 
+        {{/if}}
+
+        <div class="time" style="font-size: 9px; color: #888">{{time}}</div>
+
       </div>
 
-      
-      <div class="request">{{request}}</div> 
+    {{/if}}
 
-    </div>
   {{/each}}
 </template>
 

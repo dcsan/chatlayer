@@ -1,5 +1,7 @@
 @Map = {}
 
+NUM_BUBBLES = 30
+
 # Router.map ->
 #   @route 'map',
 #     path: "/map"
@@ -14,18 +16,10 @@
 #       @render()
 
 
-
-quotes = [
-  "I need some help with CSSI need some help with CSSI need some help with CSSI need some help with CSS"
-  # "looking for a ..."
-   "Looking for testers!"
-  # "Looking for testers!"
-  # "Anyone down to spoon?"
-]
-
 # data = new ReactiveVar()
 Template.map.rendered = ->
   tables = Tables.find({},{sort:{idx:1}})
+  Map.redraw()
   # data.set(tables)
 
 
@@ -46,11 +40,14 @@ Template.map.helpers
       return "/anon.png"
 
   randomPos: () ->
-    x = dclib.randomRange(0, 60)
-    y = dclib.randomRange(0, 20)
+    x = dclib.randomRange(0, 10)
+    y = dclib.randomRange(0, 5)
     pos = "top: #{y}px; left: #{x}px;"
     console.log("pos", pos)
     return pos
+
+  bubbles: () ->
+    getBubbles()
 
   # nextTable: ->
   #   t = tableNames.pop()
@@ -59,7 +56,16 @@ Template.map.helpers
   # tableName: (row, col) ->
   #   "T #{row} #{col}"
 
-Map.addBubble = (inputData) ->
+getBubbles = () ->
+  bubbles = Requests.find(
+    {}, 
+    {sort: {"time": -1}, limit: NUM_BUBBLES},
+  )
+  console.log("bubbles count:", bubbles.count())
+  console.log("bubbles:", bubbles.fetch() )
+  return bubbles.fetch()
+
+addBubble = (inputData) ->
   txt = inputData.request
   # TODO - bump avatar
   return unless txt
@@ -68,6 +74,16 @@ Map.addBubble = (inputData) ->
   $("#" + tableName).append(bub)
   console.log("tableName", tableName, txt)
 
+drawBubbles = () ->
+  console.log("drawBubbles")
+  bubbles = getBubbles()
+  $(".bub").remove()
+  for bub in bubbles
+    console.log("drawBub", bub)
+    addBubble(bub)
+
+Map.redraw = () ->
+  drawBubbles()
 
 Template.map.events
   'click .avatar': (evt) ->
