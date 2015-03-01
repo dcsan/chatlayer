@@ -18,3 +18,5 @@ mquandalle:jade
 coffeescript
 stylus
 reactive-var
+
+dcsan:dclib

@@ -39,7 +39,7 @@ Meteor.startup ->
 
 
 Tables.addUser = (card) ->
-  debugger
+  # debugger
   avatarImg = "https://avatars0.githubusercontent.com/u/#{card.user}"
   table = Tables.findOne({
     name: card.table

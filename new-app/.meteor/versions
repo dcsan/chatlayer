@@ -15,6 +15,7 @@ callback-hook@1.0.2
 check@1.0.4
 coffeescript@1.0.5
 dburles:mongo-collection-instances@0.3.1
+dcsan:dclib@0.0.2
 ddp@1.0.14
 deps@1.0.6
 ejson@1.0.5
@@ -27,6 +28,10 @@ htmljs@1.0.3
 http@1.0.10
 id-map@1.0.2
 insecure@1.0.2
+iron:core@0.3.4
+iron:dynamic-template@0.4.1
+iron:layout@0.4.1
+iron:router@0.9.3
 jquery@1.11.3
 json@1.0.2
 launch-screen@1.0.1

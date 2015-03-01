@@ -6,7 +6,14 @@ template(name='map')
 
     .tableBox
       each tables
-        span.oneTable(id=name) {{name}}
+        span.oneTable(id=name)
+          if avatars
+            each avatars
+              img.avatar(src=this style="{{{randomPos}}}")
+          else
+            img.avatar(src="/anon.png")
+          span.tableName {{name}}
+
         if this.spacer
           span.spacer
 
