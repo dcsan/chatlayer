@@ -46,6 +46,8 @@ Tables.addUser = (card) ->
   })
   avatars = table.avatars or []
   avatars.push(avatarImg)
+  avatars = avatars.slice(-3)
+
   update = {$set: {avatars: avatars}}
   Tables.update(
     {_id: table._id},

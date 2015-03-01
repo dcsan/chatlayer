@@ -6,7 +6,7 @@ cellHeight = 31.5px
   
   .bub
     position absolute
-    top 0px
+    bottom cellHeight
     left -50%
     padding 5%
     background-color #ddd
@@ -28,9 +28,9 @@ cellHeight = 31.5px
     width 100%
 
     .oneTable
+      // border 1px solid blue
       position relative
       display inline-block
-      border 1px solid blue
       background-color #f7f7f7
       font-size 24px
       -webkit-box-shadow inset 1px 1px 1px 2px rgba(255,255,255,1)
@@ -43,18 +43,26 @@ cellHeight = 31.5px
       text-align center
       cursor pointer
       border-radius: 2px
-      
+
       .avatar
         position absolute
         width cellHeight
         height cellHeight
+        bottom 3px
         z-index 200
+        &:hover
+          z-index 250
+          transform scale(1.1)
+          // border 2px solid white
+
       
       .tableName
         position absolute
-        left cellHeight/2
+        left 10px
         bottom 0px
-        z-index 250
+        font-size 16px
+        font-family "Impact"
+        z-index 150
 
     .spacer
       display inline-block

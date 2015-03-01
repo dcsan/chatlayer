@@ -46,9 +46,9 @@ Template.map.helpers
       return "/anon.png"
 
   randomPos: () ->
-    x = dclib.randomRange(0, 80) - 40
-    y = dclib.randomRange(0, 20) - 10
-    pos = "top: #{y}px; left #{x}px;"
+    x = dclib.randomRange(0, 60)
+    y = dclib.randomRange(-20, 20)
+    pos = "top: #{y}px; left: #{x}px;"
     console.log("pos", pos)
     return pos
 
@@ -61,6 +61,8 @@ Template.map.helpers
 
 Map.addBubble = (card) ->
   txt = card.request
+  # TODO - bump avatar
+  return unless txt
   table = card.table
   bub = "<div id='bub' class='animated bounceIn bub'>#{txt}</div>"
   $("#" + table).append(bub)
@@ -68,6 +70,9 @@ Map.addBubble = (card) ->
 
 Template.map.events
   'click .oneTable': (evt) ->
+    tableName = $(evt.target).data("tableName")
+    console.log(tableName)
+    $("#inputField").text = "hey table #{tableName}!"
     # TODO - enter your tables project
 
   'click .bub': (evt) ->

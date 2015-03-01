@@ -9,10 +9,10 @@ Template.chatroom.events({
     var id    = Meteor.user().services.github.id;
     var user = Meteor.user().services.github.username;
 
-    if (text === "") {
-      alert("Please enter your request")
-      return
-    }
+    // if (text === "") {
+    //   alert("Please enter your request")
+    //   return
+    // }
 
     if (table === "") {
       alert("Please enter your table")
