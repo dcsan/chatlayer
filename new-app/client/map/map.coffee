@@ -14,11 +14,11 @@
 
 
 quotes = [
-  "I need some help with CSS"
-  "looking for a ..."
-  "Looking for testers!"
-  "Looking for testers!"
-  "Anyone down to spoon?"
+  "I need some help with CSSI need some help with CSSI need some help with CSSI need some help with CSS"
+  # "looking for a ..."
+   "Looking for testers!"
+  # "Looking for testers!"
+  # "Anyone down to spoon?"
 ]
 
 data = new ReactiveVar()
