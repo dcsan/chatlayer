@@ -47,7 +47,7 @@ Template.map.helpers
 
   randomPos: () ->
     x = dclib.randomRange(0, 60)
-    y = dclib.randomRange(-20, 20)
+    y = dclib.randomRange(0, 20)
     pos = "top: #{y}px; left: #{x}px;"
     console.log("pos", pos)
     return pos
