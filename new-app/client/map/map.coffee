@@ -20,12 +20,14 @@ NUM_BUBBLES = 30
 Template.map.rendered = ->
   tables = Tables.find({},{sort:{idx:1}})
 
+  # first redraw after data loaded, GH login
+  setTimeout () =>
+      Map.redraw()
+  , 2000
+
   setInterval () =>
       Map.redraw()
   , 30000
-
-  # Map.redraw()
-  # data.set(tables)
 
 
 Template.map.helpers
@@ -68,7 +70,8 @@ getBubbles = () ->
   )
   console.log("bubbles count:", bubbles.count())
   console.log("bubbles:", bubbles.fetch() )
-  return bubbles.fetch()
+  bubs = bubbles.fetch().reverse()
+  return bubs
 
 addBubble = (inputData) ->
   txt = inputData.request
