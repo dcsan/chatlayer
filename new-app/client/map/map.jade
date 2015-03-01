@@ -1,8 +1,9 @@
 template(name='map')
 
   .floorplan
-    .stage ---------Presentation Stage---------
-
+    #stage ---------Presentation Stage---------
+    #audience OffSite audience
+    
     .tableBox
       each tables
         span.oneTable(id=name data-tableName=name)
@@ -20,3 +21,4 @@ template(name='map')
           br
         if this.vspace
           br
+
