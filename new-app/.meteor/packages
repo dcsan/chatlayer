@@ -13,3 +13,8 @@ momentjs:moment
 accounts-ui
 accounts-github
 accounts-base
+
+mquandalle:jade
+coffeescript
+stylus
+reactive-var
