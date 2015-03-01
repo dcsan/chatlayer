@@ -3,20 +3,25 @@
 tableNames = []
 addTableData = () ->
   Tables.remove({})
-  az = "ABCDEFGH".split("")
+  alphas = AppConfig.alphas
+  nums = AppConfig.nums
   idx = 1  # index from 1
-  for row in [1..18]
-    for letter in az
+  for letter in alphas
+    for num in nums
+      name = "#{num}#{letter}"
       table = {
-        name: "#{letter}#{row}"
-        row: row
+        name: name
+        num: num
         letter: letter
         idx: idx
       }
-      if letter=="H"
+      if num==1
         table.endcap = true
-      if idx % 2 == 0
+      if name=="1F" or name=="1L"
+        table.vspace = true
+      if num % 2 == 1
         table.spacer = true
+
       Tables.insert(table)
       idx++
 

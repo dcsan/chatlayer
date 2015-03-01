@@ -28,10 +28,11 @@ Template.map.rendered = ->
 
 
 Template.map.helpers
-  rows: ->
-    return [0..18]
-  cols: ->
-    return "ABCDEFGH".split("")
+  nums: ->
+    AppConfig.nums
+  alphas: ->
+    AppConfig.alphas
+    
   tables: ->
     Tables.find({},{sort:{idx:1}})
 
