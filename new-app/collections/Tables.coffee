@@ -1,7 +1,7 @@
 @Tables = new Meteor.Collection("Tables")
 
 tableNames = []
-addTableData = () ->
+loadTableData = () ->
   Tables.remove({})
   alphas = AppConfig.alphas
   nums = AppConfig.nums
@@ -29,7 +29,7 @@ addTableData = () ->
 Meteor.startup ->
 
   if Meteor.isServer
-    addTableData()
+    loadTableData()
 
     Meteor.publish 'Tables', (query) ->
       query ?= {}
@@ -40,9 +40,10 @@ Meteor.startup ->
 
 Tables.addUser = (card) ->
   # debugger
+  tableName = card.table.toUpperCase()
   avatarImg = "https://avatars0.githubusercontent.com/u/#{card.user}"
   table = Tables.findOne({
-    name: card.table
+    name: tableName
   })
   avatars = table.avatars or []
   avatars.push(avatarImg)

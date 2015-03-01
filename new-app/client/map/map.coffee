@@ -23,10 +23,10 @@ quotes = [
   # "Anyone down to spoon?"
 ]
 
-data = new ReactiveVar()
+# data = new ReactiveVar()
 Template.map.rendered = ->
   tables = Tables.find({},{sort:{idx:1}})
-  data.set(tables)
+  # data.set(tables)
 
 
 Template.map.helpers
@@ -69,6 +69,9 @@ Map.addBubble = (card) ->
 
 
 Template.map.events
+  'click .avatar': (evt) ->
+    username = console.log(evt.target.username)
+
   'click .oneTable': (evt) ->
     tableName = $(evt.target).data("tableName")
     console.log(tableName)
