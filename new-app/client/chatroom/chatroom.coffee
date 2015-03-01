@@ -1,5 +1,4 @@
-Template.chatroom.events 'submit': (e, t) ->
-
+enterForm = (e, t) ->
   e.preventDefault()
   text = $('#textarea').val()
   table = $('#table').val()
@@ -23,12 +22,25 @@ Template.chatroom.events 'submit': (e, t) ->
     'request': text
     'username': user
     'time': new Date
-  Requests.insert data
+
+  Requests.insert(data)
+  Tables.addUser(data)
   Map.redraw()
-  Tables.addUser data
   $('#textarea').val ''
   console.log 'added', data
   return
+
+
+Template.chatroom.events
+
+  'submit': (e, t) ->
+    enterForm(e, t)
+
+  'keydown form': (e, t) ->
+    if (e.keyCode == 13)
+      console.log("enterForm")
+      enterForm(e, t)
+    
 
 
 Template.chatroom.helpers msg: ->
