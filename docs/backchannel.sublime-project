@@ -1,0 +1,12 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/Users/dc/dev/shumi/chatlayer/new-app"
+		},
+    {
+      "path":"../docs"
+    }
+	]
+}

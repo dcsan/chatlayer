@@ -6,27 +6,38 @@ X capitals on input
 
 X remove text on input
 
+show history of bubbles on map
+remove empty messages from chat log
+emoji only popups
+
 bug on NO table
 
 dont show empty text
 
 click user > show github profile?
+moving people between tables
+
+trap return in field
 
 dropdown choose an emoji
-trap return in field
 destroy bubbles after awhile?
 
 
 ----------------------------
 Features
 
+
+
+VOTING!
+clicking on map - what to do?
+
+open profile in tab
+  target="=profile"
+
 Popup show to capture info
 
 click to walk across
 
-emoji only popups
-
-VOTING!
 
 sound effects
 quick poll?
@@ -34,3 +45,18 @@ quick poll?
 signout
 
 enable outside the hacakathon
+
+
+----------------------------
+MARKETING
+
+scraper names
+use full contact API
+
+
+countdown landing page
+bots to make it look busy
+fake githubIDs
+
+explanation
+
