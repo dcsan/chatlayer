@@ -2,6 +2,9 @@
 
 tableNames = []
 loadTableData = () ->
+  t = Tables.find().count()
+  if t != 0
+    return   # dont nuke the data!
   Tables.remove({})
   alphas = AppConfig.alphas
   nums = AppConfig.nums

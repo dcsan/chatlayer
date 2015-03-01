@@ -19,7 +19,12 @@ NUM_BUBBLES = 30
 # data = new ReactiveVar()
 Template.map.rendered = ->
   tables = Tables.find({},{sort:{idx:1}})
-  Map.redraw()
+
+  setInterval () =>
+      Map.redraw()
+  , 30000
+
+  # Map.redraw()
   # data.set(tables)
 
 
