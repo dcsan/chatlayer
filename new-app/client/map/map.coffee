@@ -15,6 +15,12 @@ NUM_BUBBLES = 30
 #     action: ->
 #       @render()
 
+randomPos = (rx, ry) ->
+  x = dclib.randomRange(0, rx)
+  y = dclib.randomRange(0, ry)
+  pos = "top: #{y}px; left: #{x}px;"
+  # console.log("pos", pos)
+  return pos
 
 # data = new ReactiveVar()
 Template.map.rendered = ->
@@ -47,11 +53,7 @@ Template.map.helpers
       return "/anon.png"
 
   randomPos: () ->
-    x = dclib.randomRange(0, 10)
-    y = dclib.randomRange(0, 5)
-    pos = "top: #{y}px; left: #{x}px;"
-    console.log("pos", pos)
-    return pos
+    randomPos(10,5)
 
   bubbles: () ->
     getBubbles()
@@ -78,7 +80,8 @@ addBubble = (inputData) ->
   # TODO - bump avatar
   return unless txt
   tableName = inputData.table.toUpperCase()
-  bub = "<div id='bub' class='animated bounceIn bub'>#{txt}</div>"
+  jitter = randomPos(3,3)
+  bub = "<div id='bub' class='animated bounceIn bub' style='#{jitter}'>#{txt}</div>"
   $("#" + tableName).append(bub)
   console.log("tableName", tableName, txt)
 
