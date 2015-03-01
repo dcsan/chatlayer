@@ -2,7 +2,11 @@ TODO
 
 X no current user hide the input field
 
-capitals on input
+X capitals on input
+
+X remove text on input
+
+dont show empty text
 
 click user > show github profile?
 
@@ -22,5 +26,8 @@ emoji only popups
 
 VOTING!
 
+sound effects
+quick poll?
 
 signout
+
