@@ -38,6 +38,20 @@ Template.map.helpers
   tables: ->
     Tables.find({},{sort:{idx:1}})
 
+  lastAvatar: (table) ->
+    src = table.avatars.pop()
+    if src
+      return src
+    else
+      return "/anon.png"
+
+  randomPos: () ->
+    x = dclib.randomRange(0, 80) - 40
+    y = dclib.randomRange(0, 20) - 10
+    pos = "top: #{y}px; left #{x}px;"
+    console.log("pos", pos)
+    return pos
+
   # nextTable: ->
   #   t = tableNames.pop()
   #   console.log("t", t)
@@ -54,6 +68,7 @@ Map.addBubble = (card) ->
 
 Template.map.events
   'click .oneTable': (evt) ->
-    txt = _.shuffle(quotes)[0]
+    # TODO - enter your tables project
+
   'click .bub': (evt) ->
-    $(evt.target).remove();
+    $(evt.target).remove()

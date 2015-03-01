@@ -30,6 +30,7 @@ Template.chatroom.events({
 
     Requests.insert(data);
     Map.addBubble(data);
+    Tables.addUser(data)
     console.log("added", data)
   }
 
