@@ -5,7 +5,10 @@
 
 Meteor.startup ->
   if Meteor.isServer
-    ghSettings = Meteor.settings.loginServices.github
-    Accounts.loginServiceConfiguration.remove({})
-    Accounts.loginServiceConfiguration.insert(ghSettings)
-    console.log("configured github", ghSettings)
+    try
+      ghSettings = Meteor.settings.loginServices.github
+      Accounts.loginServiceConfiguration.remove({})
+      Accounts.loginServiceConfiguration.insert(ghSettings)
+      console.log("configured github", ghSettings)
+    catch
+      console.warn("no settings found, user meteor --settings private/dev.json")
