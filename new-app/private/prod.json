@@ -1,0 +1,12 @@
+{
+  "loginServices": {
+    "github": {
+      "service" : "github",
+      "loginStyle" : "popup",
+      "clientId": "b7e57fb0ede1a8422194", 
+      "secret": "765a85839d14c5314067be7079977f8928a11d45"
+    }
+  }
+}
+
+
