@@ -6,7 +6,7 @@
     </div>
 
     {{> loginBox}}
-
+    {{#if currentUser}}
     <form>
       <textarea id="textarea" placeholder="What would you like to request?"></textarea><br>
       <input type="text" maxlength="3" placeholder="Table" id="table" style="text-tranform: uppercase">
@@ -20,7 +20,7 @@
 
       <input type="submit">
     </form>
-
+{{/if}}
     {{> cards}}
 
   </div>
