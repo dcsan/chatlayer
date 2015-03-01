@@ -81,9 +81,10 @@ addBubble = (inputData) ->
   return unless txt
   tableName = inputData.table.toUpperCase()
   jitter = randomPos(3,3)
-  bub = "<div id='bub' class='animated bounceIn bub' style='#{jitter}'>#{txt}</div>"
+  style='#{jitter}'
+  bub = "<div id='bub' class='animated bounceIn bub' >#{txt}</div>"
   $("#" + tableName).append(bub)
-  console.log("tableName", tableName, txt)
+  console.log("tableName", tableName, txt, bub)
 
 drawBubbles = () ->
   console.log("drawBubbles")
