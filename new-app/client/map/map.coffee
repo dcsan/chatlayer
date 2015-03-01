@@ -69,6 +69,10 @@ Map.addBubble = (card) ->
 
 
 Template.map.events
+  'click .avatar': (evt) ->
+    username = console.log(evt.target.username)
+    
+
   'click .oneTable': (evt) ->
     tableName = $(evt.target).data("tableName")
     console.log(tableName)

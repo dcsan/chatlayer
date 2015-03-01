@@ -10,8 +10,8 @@ template(name='map')
           if avatars
             each avatars
               img.avatar(src=this style="{{{randomPos}}}")
-          else
-            img.avatar(src="/anon.png")
+          //- else
+          //-   img.avatar(src="/anon.png")
           span.tableName {{name}}
 
         if this.spacer

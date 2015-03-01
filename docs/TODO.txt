@@ -1,0 +1,26 @@
+TODO
+
+X no current user hide the input field
+
+capitals on input
+
+click user > show github profile?
+
+dropdown choose an emoji
+trap return in field
+destroy bubbles after awhile?
+
+
+----------------------------
+Features
+
+Popup show to capture info
+
+click to walk across
+
+emoji only popups
+
+VOTING!
+
+
+signout
