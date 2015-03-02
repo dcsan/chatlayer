@@ -10,19 +10,14 @@
       <form>
         <textarea id="textarea" placeholder="What would you like to request?"></textarea><br>
         <input type="text" maxlength="3" placeholder="Table" id="table" style="text-tranform: uppercase">
-        <select>
-          <option selected="Choose an Emoji">Choose an Emoji</option>
-          <option value="happy">happy</option>
-          <option value="sad">sad</option>
-          <option value="ranty">ranty</option>
-        </select>
+        
 
         <input class="submit" type="submit">
       </form>
 
     {{else}}
         <strong>Hello Hacker!</strong><br>
-        Please connect to make a post:<br>
+        Login to Connect and Participate in Real-Time Voting:<br>
         {{> loginButtons}}
         <h2> login!</h2>
     {{/if}}

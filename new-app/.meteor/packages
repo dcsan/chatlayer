@@ -8,7 +8,6 @@ meteor-platform
 autopublish
 insecure
 particle4dev:sass
-msavin:mongol
 momentjs:moment
 accounts-ui
 accounts-github
@@ -20,3 +19,4 @@ stylus
 reactive-var
 
 dcsan:dclib
+msavin:mongol
