@@ -1,6 +1,6 @@
 @Map = {}
 
-NUM_BUBBLES = 30
+NUM_BUBBLES = 10
 
 # Router.map ->
 #   @route 'map',
