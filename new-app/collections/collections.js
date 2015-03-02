@@ -18,14 +18,14 @@ TeamName.getCurrent = function() {
 	t = TeamName.findOne({});
 	if (t==null) {
 		initTeams();
-		return ("backchannel")
+		return ("coming-soon")
 	}
 	return (t.teamName);
 }
 
 function initTeams() {
 	t = {
-		teamName: "backchannel"
+		teamName: "coming-soon"
 	}
 	TeamName.insert(t);
 }

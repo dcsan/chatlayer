@@ -2,6 +2,9 @@
 
 tableNames = []
 loadTableData = () ->
+  t = Tables.find().count()
+  if t != 0
+    return   # dont nuke the data!
   Tables.remove({})
   alphas = AppConfig.alphas
   nums = AppConfig.nums
@@ -40,6 +43,7 @@ Meteor.startup ->
 
 Tables.addUser = (card) ->
   # debugger
+  console.log("addUser", card)
   tableName = card.table.toUpperCase()
   avatarImg = "https://avatars0.githubusercontent.com/u/#{card.user}"
   table = Tables.findOne({

@@ -1,5 +1,7 @@
 @Map = {}
 
+NUM_BUBBLES = 5
+
 # Router.map ->
 #   @route 'map',
 #     path: "/map"
@@ -13,20 +15,25 @@
 #     action: ->
 #       @render()
 
-
-
-quotes = [
-  "I need some help with CSSI need some help with CSSI need some help with CSSI need some help with CSS"
-  # "looking for a ..."
-   "Looking for testers!"
-  # "Looking for testers!"
-  # "Anyone down to spoon?"
-]
+randomPos = (rx, ry) ->
+  x = dclib.randomRange(0, rx)
+  y = dclib.randomRange(0, ry)
+  pos = "top: #{y}px; left: #{x}px;"
+  # console.log("pos", pos)
+  return pos
 
 # data = new ReactiveVar()
 Template.map.rendered = ->
   tables = Tables.find({},{sort:{idx:1}})
-  # data.set(tables)
+
+  # first redraw after data loaded, GH login
+  setTimeout () =>
+      Map.redraw()
+  , 2000
+
+  setInterval () =>
+      Map.redraw()
+  , 30000
 
 
 Template.map.helpers
@@ -46,11 +53,10 @@ Template.map.helpers
       return "/anon.png"
 
   randomPos: () ->
-    x = dclib.randomRange(0, 60)
-    y = dclib.randomRange(0, 20)
-    pos = "top: #{y}px; left: #{x}px;"
-    console.log("pos", pos)
-    return pos
+    randomPos(10,5)
+
+  bubbles: () ->
+    getBubbles()
 
   # nextTable: ->
   #   t = tableNames.pop()
@@ -59,15 +65,37 @@ Template.map.helpers
   # tableName: (row, col) ->
   #   "T #{row} #{col}"
 
-Map.addBubble = (inputData) ->
+getBubbles = () ->
+  bubbles = Requests.find(
+    {}, 
+    {sort: {"time": -1}, limit: NUM_BUBBLES},
+  )
+  console.log("bubbles count:", bubbles.count())
+  console.log("bubbles:", bubbles.fetch() )
+  bubs = bubbles.fetch().reverse()
+  return bubs
+
+addBubble = (inputData) ->
   txt = inputData.request
   # TODO - bump avatar
   return unless txt
   tableName = inputData.table.toUpperCase()
-  bub = "<div id='bub' class='animated bounceIn bub'>#{txt}</div>"
+  jitter = randomPos(3,3)
+  style='#{jitter}'
+  bub = "<div id='bub' class='animated bounceIn bub' >#{txt}</div>"
   $("#" + tableName).append(bub)
-  console.log("tableName", tableName, txt)
+  console.log("tableName", tableName, txt, bub)
 
+drawBubbles = () ->
+  console.log("drawBubbles")
+  bubbles = getBubbles()
+  $(".bub").remove()
+  for bub in bubbles
+    console.log("drawBub", bub)
+    addBubble(bub)
+
+Map.redraw = () ->
+  drawBubbles()
 
 Template.map.events
   'click .avatar': (evt) ->

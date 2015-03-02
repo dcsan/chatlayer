@@ -8,22 +8,32 @@ cellHeight = 26.5px
   background-color #d7d7d7
   z-index 500
 
-  .stage
+  #stage
     height cellHeight
     text-align center
     border 1px solid #ccc
     width 100%
     background-color #c5daeb
 
+  #audience
+    position fixed
+    height cellHeight*2
+    bottom 0px
+    width 33%
+    text-align center
+    border 1px solid #ccc
+    background-color #a2eb8c
+    z-index 500
+
   .bub
     position absolute
     bottom cellHeight
     left -50%
-    padding 5%
-    background-color #ddd
-    border-radius 3px
+    padding 2px
+    background-color #ebdc94
+    border-radius 8px
     border: 1px solid #444
-    font-size 16px
+    font-size 12px
     width 200%
     color black
     z-index 200

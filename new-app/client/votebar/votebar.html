@@ -1,24 +1,15 @@
 <template name="votebar">
 	<div class="votebar">
 
-		{{#each returnTeamName}}
-		
-		<div class="teamName">Now Presenting: <br /><div class="big"><b>{{teamName}}</b></div></div>
-
+		{{#each returnTeamName}}	
+  		<div class="teamName">Now Presenting: <br /><div class="big"><b>{{teamName}}</b></div></div>
 		{{/each}}
-			
-			
-		
-			
-			
-			
-		{{#if currentUser}}
-		<div class="buttonBox">
-			<button class="yes"><b>Upvote</b></button>
-			<button class="no"> <b>Downvote</b>
-</button>
 
-		</div>
+		{{#if currentUser}}
+  		<div class="buttonBox">
+  			<button class="yes"><b>Upvote</b></button>
+  			<button class="no"> <b>Downvote</b></button>
+  		</div>
 		{{/if}}
 	
 		<br />
@@ -29,4 +20,5 @@
 			{{/each}}
 		</div>
 	</div>
+
 </template>
